@@ -20,43 +20,7 @@
         
         <!-- Reset Button -->
         <button id="downloadButton">Download</button>
-
-    <script>
-    // Function to fetch the current task status from the server
-      function updateStatus() {
-        fetch('/electricalGrid/opeg-status')
-          .then(response => response.json())
-          .then(data => {
-            const statusElement = document.getElementById('currentStatus');
-            statusElement.textContent = `status is ${data.status}`;
-            console.log('updating status to:' data.status);
-          })
-          .catch(error => console.error('Error fetching task status:', error));
-      }
-
-    // Event listener for the"Complete Task" button
-     document.getElementById('submitButton').addEventListener('click', () => {
-        const textInput = document.getElementById('textField');
-        const inputValue = textInput.value;
-        fetch('/electricalGrid/auth-eg', {
-          method: 'POST'  // Send a POST request to mark the task as completed
-          headers: {
-            'Content-Type': 'application/json'
-          }
-          body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-          // After updating, fetch the new status and update the page
-          updateStatus();
-        })
-        .catch(error => console.error('Error completing task:', error));
-      });
-    
-    // Initial load
-    updateStatus();
-    </script>
-
+    <script src="./eg.js"></script>
 
 </body>
 </html>

@@ -24,3 +24,4 @@ app.listen(PORT, IP_ADDR_VPN, () => {
     console.log(`Server is running on http://${IP_ADDR_VPN}:${PORT}`);
 });
 
+module.exports = IP_ADDR_VPN;
