@@ -1,3 +1,3 @@
-status: DECRYPTED
+DECRYPTED
 admin
 i5space
